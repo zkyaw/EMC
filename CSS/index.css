@@ -39,41 +39,44 @@ body::before {
   background-color: #00569d;
 }
 
-.navbar ul {
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.navbar-logo img {
+  height: 50px;
+  cursor: pointer;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;
-  float: right;
+  gap: 10px;
 }
 
 .navbar li {
-  padding: 0;
+  padding: 0px;
 }
 
 .navbar a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
-  padding: 22px;
+  padding: 10px;
   display: block;
-  text-align: right;
-  transition: background 0.3s;
+  font-family: "Josefin Sans";
 }
 
-.navbar a:hover {
-  background-color: #005192;
-}
-
-.navbar .nav-text {
-  margin-right: auto;
-  padding: 10px 15px;
+.nav-text {
+  padding: 50px 15px;
   display: flex;
   flex-direction: column;
   text-align: right;
-  line-height: 1.2;
   color: white;
-  cursor: default;
+  line-height: 1.2;
 }
 
 .title-line1 {
@@ -85,13 +88,14 @@ body::before {
 
 .title-line2 {
   font-size: 12px;
+  font-style: italic;
 }
 
 /* Hero Section */
 .hero-section {
   color: #00569d;
-  padding: 30px 100px;
-  max-width: 590px;
+  padding: 30px 120px;
+  max-width: 700px;
 }
 
 .hero-top {
@@ -130,7 +134,7 @@ footer {
   background-color: #00569d;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   margin-top: auto;
 }
 
