@@ -78,6 +78,7 @@ body::before {
   text-align: right;
   color: white;
   line-height: 1.2;
+  cursor: default;
 }
 
 .title-line1 {
@@ -141,4 +142,5 @@ footer {
 
 footer p {
   margin: 5px 0;
+  cursor: default;
 }
