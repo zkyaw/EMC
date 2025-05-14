@@ -25,6 +25,12 @@ body::before {
   z-index: -1;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .navbar ul {
   list-style-type: none;
   background-color: #00569d;
@@ -77,4 +83,17 @@ body::before {
   font-size: 12px;
   padding-right: 20px;
   cursor: default;
+}
+
+footer {
+  background-color: #00569d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: "Josefin Sans";
+  margin-top: auto;
+}
+
+footer p {
+  margin: 5px 0;
 }
