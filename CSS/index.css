@@ -97,3 +97,43 @@ footer {
 footer p {
   margin: 5px 0;
 }
+
+.hero-section {
+  font-family: "Josefin Sans", sans-serif;
+  color: #00569d;
+  padding: 30px 100px;
+  max-width: 500px;
+}
+
+.hero-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 0px;
+}
+
+.hero-logo {
+  height: 300px;
+  padding: 0px;
+}
+
+.hero-heading {
+  font-size: 64px;
+  line-height: 1.2;
+  margin: 0;
+  padding-top: 30px;
+}
+
+.hero-paragraph {
+  margin-top: 0px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.start-link {
+  display: inline-block;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #00569d;
+  text-decoration: none;
+  font-size: 20px;
+}
