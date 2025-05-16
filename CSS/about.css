@@ -100,25 +100,30 @@ body::before {
   max-width: 1000px;
 }
 
-.hero-top {
-  display: flex;
-  align-items: flex-start;
-  gap: 0;
-}
-
+.hero-top,
 .hero-bottom {
   display: flex;
   align-items: flex-start;
-  gap: 0;
-  justify-content: space-between;
+}
+
+.hero-top {
+  gap: 40px;
+  width: 48%;
+}
+
+.hero-bottom {
+  padding-top: 180px;
 }
 
 .hero-right {
   display: flex;
-  align-items: flex-start;
-  gap: 0;
-  text-align: right;
-  margin-left: auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  width: 48%;
+  padding-right: 230px;
 }
 
 .hero-heading {
@@ -127,10 +132,19 @@ body::before {
   padding-top: 10px;
 }
 
-.hero-paragraph {
+.hero-paragraph,
+.hero-paragraph-mission {
   font-size: 15px;
   line-height: 1.6;
-  margin-top: 0;
+}
+
+.hero-paragraph-mission {
+  display: flex;
+  width: 47.3%;
+  position: absolute;
+  right: 0;
+  padding-top: 80px;
+  padding-right: 80px;
 }
 
 .start-link {
@@ -139,7 +153,9 @@ body::before {
   font-weight: bold;
   color: #00569d;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 35px;
+  position: absolute;
+  left: 45%;
 }
 
 /* Footer */
