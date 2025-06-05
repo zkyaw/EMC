@@ -10,10 +10,10 @@
 }
 
 body {
-  font-family: "Josefin Sans", sans-serif;
-  height: 100%;
-  overflow-x: hidden;
   position: relative;
+  font-family: "Josefin Sans", sans-serif;
+  overflow: hidden;
+  height: 100%;
 }
 
 body::before {
@@ -90,6 +90,41 @@ body::before {
 .title-line2 {
   font-size: 12px;
   font-style: italic;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  display: none;
+}
+
+@media screen and (max-width: 520px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background: #00569d;
+    position: absolute;
+    top: 0;
+    right: -900px;
+    width: 80%;
+    height: 100vh;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+  .nav-links a {
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 24px;
+  }
 }
 
 /* Hero Section */

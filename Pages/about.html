@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/about.css" />
-    <title>Expert Mind Center</title>
+    <title>About | Expert Mind Center</title>
   </head>
 
   <body>
@@ -32,6 +32,14 @@
               </div>
             </li>
           </ul>
+          <img
+            src="../Images/menu.png"
+            alt=""
+            class="menu-btn"
+            style="
+              filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(333deg)
+                brightness(107%) contrast(101%);
+            " />
         </div>
       </nav>
 
@@ -94,5 +102,14 @@
         <p>Isaiah 54:13</p>
       </footer>
     </div>
+
+    <script>
+      const navBtn = document.querySelector(".menu-btn");
+      const navLinks = document.querySelector(".nav-links");
+
+      navBtn.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

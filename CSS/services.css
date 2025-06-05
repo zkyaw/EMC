@@ -10,10 +10,10 @@
 }
 
 body {
-  font-family: "Josefin Sans", sans-serif;
-  height: 100%;
-  overflow-x: hidden;
   position: relative;
+  font-family: "Josefin Sans", sans-serif;
+  overflow: hidden;
+  height: 100%;
 }
 
 body::before {
@@ -92,6 +92,41 @@ body::before {
   font-style: italic;
 }
 
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  display: none;
+}
+
+@media screen and (max-width: 520px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background: #00569d;
+    position: absolute;
+    top: 0;
+    right: -900px;
+    width: 80%;
+    height: 100vh;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+  .nav-links a {
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 24px;
+  }
+}
+
 /* Title */
 .services-title {
   text-align: center;
@@ -134,10 +169,26 @@ body::before {
   cursor: pointer;
 }
 
-.icon-student { top: 30%; left: 43%; transform: translate(-50%, -50%); }
-.icon-adults { top: 32%; left: 61%; transform: translate(-50%, -50%); }
-.icon-other { top: 52%; left: 58%; transform: translate(-50%, -50%); }
-.icon-org   { top: 48%; left: 36%; transform: translate(-50%, -50%); }
+.icon-student {
+  top: 30%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+}
+.icon-adults {
+  top: 32%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+}
+.icon-other {
+  top: 52%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+}
+.icon-org {
+  top: 48%;
+  left: 36%;
+  transform: translate(-50%, -50%);
+}
 
 /* Popups */
 .popup {
@@ -183,7 +234,7 @@ body::before {
 .popup-title {
   font-size: 20px;
   font-weight: bold;
-  color: #00579D;
+  color: #00579d;
   text-align: center;
   margin-bottom: 20px;
   letter-spacing: 0.2em;
@@ -195,7 +246,7 @@ body::before {
   margin: 0 0 20px 0;
   padding: 0;
   text-align: center;
-  color: #00579D;
+  color: #00579d;
   font-size: 17px;
   line-height: 2.2;
   font-weight: normal;
