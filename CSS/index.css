@@ -14,6 +14,9 @@ body {
   font-family: "Josefin Sans", sans-serif;
   overflow: hidden;
   height: 100%;
+  overflow-x: hidden;
+  position: relative;
+  background: url(../Images/Background.jpg) center/cover no-repeat fixed;
 }
 
 body::before {
@@ -60,7 +63,7 @@ body::before {
 }
 
 .navbar li {
-  padding: 0px;
+  padding: 0;
 }
 
 .navbar a {
@@ -121,6 +124,7 @@ body::before {
   .nav-links.active {
     right: 0;
   }
+
   .nav-links a {
     width: 100%;
     padding: 10px 30px;
@@ -178,4 +182,54 @@ footer {
 footer p {
   margin: 5px 0;
   cursor: default;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-heading {
+    font-size: 56px;
+  }
+  .hero-logo {
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 30px 40px;
+    max-width: 100%;
+  }
+  .hero-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-heading {
+    font-size: 42px;
+    padding-top: 20px;
+  }
+  .hero-logo {
+    height: 200px;
+  }
+  .hero-paragraph {
+    font-size: 18px;
+    text-align: center;
+  }
+  .start-link {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 28px;
+  }
+  .hero-logo {
+    height: 140px;
+  }
+  .start-link {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }

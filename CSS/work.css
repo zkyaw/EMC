@@ -162,7 +162,8 @@ body::before {
   height: 670px;
   overflow: hidden;
   position: absolute;
-  left: 33%;
+  left: 50%;
+  transform: translateX(-50%);
   padding-top: 20px;
 }
 
@@ -178,7 +179,8 @@ body::before {
   background-color: #00569d;
   font-size: 28px;
   position: absolute;
-  left: 45%;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 150px;
   padding: 12px 28px;
   border-radius: 24px;
@@ -202,4 +204,36 @@ footer {
 footer p {
   margin: 5px 0;
   cursor: default;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .image-container {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .start-link {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+  }
+}
+
+@media (max-width: 700px) {
+  .image-container {
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 }
