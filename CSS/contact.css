@@ -37,6 +37,8 @@ body::before {
 /* Navbar */
 .navbar {
   background-color: #00569d;
+  position: relative;
+  z-index: 1000;
 }
 
 .navbar-container {
@@ -57,6 +59,7 @@ body::before {
   display: flex;
   align-items: center;
   gap: 10px;
+  z-index: 1000;
 }
 
 .navbar li {
@@ -68,6 +71,7 @@ body::before {
   text-decoration: none;
   padding: 10px;
   display: block;
+  font-family: "Josefin Sans";
 }
 
 .nav-text {
@@ -98,6 +102,7 @@ body::before {
   right: 20px;
   width: 30px;
   display: none;
+  z-index: 1001;
 }
 
 @media screen and (max-width: 520px) {
@@ -115,6 +120,7 @@ body::before {
     height: 100vh;
     padding-top: 80px;
     transition: all 0.3s ease;
+    z-index: 1000;
   }
 
   .nav-links.active {
@@ -136,6 +142,8 @@ body::before {
   padding: 60px 100px;
   color: #00569d;
   position: relative;
+  z-index: 1;
+  flex: 1;
 }
 
 /* Social Left Side */
@@ -146,6 +154,7 @@ body::before {
   gap: 130px;
   margin-top: 160px;
   margin-left: 250px;
+  z-index: 1;
 }
 
 .social-item {
@@ -202,6 +211,7 @@ body::before {
   text-align: center;
   margin-top: 10px;
   padding-top: 10px;
+  z-index: 1;
 }
 
 .map-text {
@@ -241,6 +251,7 @@ body::before {
   max-width: 850px;
   width: 100%;
   margin: 10px auto 5px auto;
+  z-index: 1;
 }
 
 .detail {
@@ -279,108 +290,84 @@ footer p {
   cursor: default;
 }
 
-/* Responsive */
-@media (max-width: 1700px) {
-  .contact-section {
-    padding: 60px 40px;
+@media (max-width: 1024px) {
+  .contact-title h1 {
+    font-size: 40px;
   }
 
-  .social-box {
-    margin-left: 180px;
-  }
-}
-
-@media (max-width: 1500px) {
   .social-box {
     margin-left: 120px;
+    margin-top: 100px;
+    gap: 90px;
   }
 
   .contact-section {
-    padding: 60px 25px;
+    padding: 40px 40px;
   }
 }
 
-@media (max-width: 1300px) {
-  .social-box {
-    margin-left: 50px;
-  }
-
-  .contact-section {
-    padding: 40px 8px;
-  }
-
-  .map-container,
-  .map-text,
-  .contact-details {
-    max-width: 600px;
-  }
-}
-
-@media (max-width: 1100px) {
-  .contact-section {
-    padding: 20px 2vw;
-  }
-
-  .social-box {
-    margin-left: 10px;
-    gap: 70px;
-    margin-top: 60px;
-  }
-
-  .contact-title h1 {
-    font-size: 30px;
-  }
-
-  .map-container,
-  .map-text,
-  .contact-details {
-    max-width: 98vw;
-  }
-}
-
-@media (max-width: 950px) {
+@media (max-width: 768px) {
   .contact-section {
     flex-direction: column;
     align-items: center;
-    padding: 20px 2vw;
+    padding: 30px 20px;
   }
 
   .social-box {
     flex-direction: row;
-    margin: 40px 0 0 0;
-    gap: 48px;
     justify-content: center;
-    align-items: flex-start;
-    min-width: unset;
+    margin: 40px 0 0 0;
+    gap: 40px;
   }
 
-  .contact-content {
-    max-width: 100vw;
-    min-width: unset;
-    margin: 0;
-    width: 100%;
-  }
-
-  .contact-title {
-    position: static;
-    transform: none;
-    width: 100%;
-    margin-top: 24px;
+  .contact-title h1 {
+    font-size: 36px;
+    margin-top: 10px;
   }
 
   .map-container,
   .map-text,
   .contact-details {
-    max-width: 98vw;
+    max-width: 100%;
   }
 }
 
-@media (max-width: 700px) {
-  .map-container iframe {
-    height: 210px;
+@media (max-width: 480px) {
+  .contact-title h1 {
+    font-size: 28px;
   }
 
-  .contact-title h1 {
-    font-size: 18vw;
+  .social-box {
+    gap: 20px;
+  }
+
+  .social-item p {
+    font-size: 18px;
+  }
+
+  .social-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .visit-label {
+    font-size: 18px;
+  }
+
+  .visit-sub {
+    font-size: 16px;
+  }
+
+  .label {
+    font-size: 18px;
+  }
+
+  .detail {
+    font-size: 16px;
+  }
+
+  .detail img {
+    width: 32px;
+    height: 32px;
   }
 }

@@ -59,7 +59,7 @@ body::before {
 }
 
 .navbar li {
-  padding: 0;
+  padding: 0px;
 }
 
 .navbar a {
@@ -67,6 +67,7 @@ body::before {
   text-decoration: none;
   padding: 10px;
   display: block;
+  font-family: "Josefin Sans";
 }
 
 /* Nav Text */
@@ -115,11 +116,13 @@ body::before {
     height: 100vh;
     padding-top: 80px;
     transition: all 0.3s ease;
+    z-index: 999;
   }
 
   .nav-links.active {
     right: 0;
   }
+
   .nav-links a {
     width: 100%;
     padding: 10px 30px;
@@ -204,36 +207,4 @@ footer {
 footer p {
   margin: 5px 0;
   cursor: default;
-}
-
-/* Responsive */
-@media (max-width: 1100px) {
-  .image-container {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .start-link {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 100px;
-  }
-}
-
-@media (max-width: 700px) {
-  .image-container {
-    width: 100%;
-    height: auto;
-    padding: 0 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-  }
-
-  .image-container img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
 }

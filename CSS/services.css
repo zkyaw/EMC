@@ -12,10 +12,8 @@
 body {
   position: relative;
   font-family: "Josefin Sans", sans-serif;
-  overflow: hidden;
   height: 100%;
   overflow-x: hidden;
-  position: relative;
 }
 
 body::before {
@@ -39,6 +37,8 @@ body::before {
 /* Navbar */
 .navbar {
   background-color: #00569d;
+  position: relative;
+  z-index: 10;
 }
 
 .navbar-container {
@@ -100,6 +100,7 @@ body::before {
   right: 20px;
   width: 30px;
   display: none;
+  z-index: 11;
 }
 
 @media screen and (max-width: 520px) {
@@ -117,6 +118,7 @@ body::before {
     height: 100vh;
     padding-top: 80px;
     transition: all 0.3s ease;
+    z-index: 9;
   }
 
   .nav-links.active {
@@ -143,14 +145,15 @@ body::before {
   letter-spacing: 0.2em;
   font-weight: bold;
   padding-top: 10px;
-  text-align: center;
 }
 
-/* Brain Section*/
+/* Brain Section */
 .brain-section {
   text-align: center;
   padding: 20px;
   position: relative;
+  z-index: 1;
+  flex: 1;
 }
 
 .brain-container {
@@ -158,11 +161,14 @@ body::before {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .brain-image {
   width: 100%;
   display: block;
+  max-width: 930px;
+  margin: 0 auto;
 }
 
 .icon {
@@ -237,14 +243,9 @@ body::before {
   color: #00579d;
   font-size: 17px;
   line-height: 2.2;
-  font-weight: normal;
   flex-grow: 1;
   overflow-y: auto;
   letter-spacing: 0.08em;
-}
-
-.popup-content ul li {
-  margin-bottom: 0;
 }
 
 .popup-button {
@@ -281,7 +282,6 @@ footer p {
   cursor: default;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .services-title h1 {
     font-size: 36px;
@@ -289,6 +289,11 @@ footer p {
 
   .brain-container {
     width: 95%;
+  }
+
+  .brain-image {
+    width: 100%;
+    max-width: 650px;
   }
 
   .popup {
@@ -318,6 +323,10 @@ footer p {
 @media (max-width: 480px) {
   .services-title h1 {
     font-size: 28px;
+  }
+
+  .brain-image {
+    max-width: 95%;
   }
 
   .popup {
