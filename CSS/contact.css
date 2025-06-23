@@ -105,35 +105,6 @@ body::before {
   z-index: 1001;
 }
 
-@media screen and (max-width: 520px) {
-  .menu-btn {
-    display: block;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    background: #00569d;
-    position: absolute;
-    top: 0;
-    right: -900px;
-    width: 80%;
-    height: 100vh;
-    padding-top: 80px;
-    transition: all 0.3s ease;
-    z-index: 1000;
-  }
-
-  .nav-links.active {
-    right: 0;
-  }
-
-  .nav-links a {
-    width: 100%;
-    padding: 10px 30px;
-    font-size: 24px;
-  }
-}
-
 /* Contact Section */
 .contact-section {
   display: flex;
@@ -332,7 +303,34 @@ footer p {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background: #00569d;
+    position: absolute;
+    top: 0;
+    right: -900px;
+    width: 80%;
+    height: 100vh;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 24px;
+  }
+
   .contact-title h1 {
     font-size: 28px;
   }
@@ -350,6 +348,21 @@ footer p {
     height: 50px;
   }
 
+  .map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+  }
+
+  .map-container iframe {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   .visit-label {
     font-size: 18px;
   }
@@ -358,16 +371,17 @@ footer p {
     font-size: 16px;
   }
 
+  .detail {
+    padding: 20px;
+  }
+
   .label {
+    font-weight: bold;
     font-size: 18px;
   }
 
-  .detail {
-    font-size: 16px;
-  }
-
-  .detail img {
-    width: 32px;
-    height: 32px;
+  .label img {
+    width: 24px;
+    height: 24px;
   }
 }
