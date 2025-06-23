@@ -218,12 +218,13 @@ footer p {
     display: none;
   }
   .image-mobile {
-    height: 400px;
+    height: 355px;
     display: block;
   }
   .start-link {
     align-items: center;
     font-size: 24px;
-    padding: 8px 130px;
+    padding-left: 100px;
+    white-space: nowrap;
   }
 }
