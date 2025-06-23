@@ -103,35 +103,6 @@ body::before {
   z-index: 11;
 }
 
-@media screen and (max-width: 520px) {
-  .menu-btn {
-    display: block;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    background: #00569d;
-    position: absolute;
-    top: 0;
-    right: -900px;
-    width: 80%;
-    height: 100vh;
-    padding-top: 80px;
-    transition: all 0.3s ease;
-    z-index: 9;
-  }
-
-  .nav-links.active {
-    right: 0;
-  }
-
-  .nav-links a {
-    width: 100%;
-    padding: 10px 30px;
-    font-size: 24px;
-  }
-}
-
 /* Title */
 .services-title {
   text-align: center;
@@ -179,10 +150,26 @@ body::before {
   cursor: pointer;
 }
 
-.icon-student { top: 30%; left: 43%; transform: translate(-50%, -50%); }
-.icon-adults  { top: 32%; left: 61%; transform: translate(-50%, -50%); }
-.icon-other   { top: 52%; left: 58%; transform: translate(-50%, -50%); }
-.icon-org     { top: 48%; left: 36%; transform: translate(-50%, -50%); }
+.icon-student {
+  top: 30%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+}
+.icon-adults {
+  top: 32%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+}
+.icon-other {
+  top: 52%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+}
+.icon-org {
+  top: 48%;
+  left: 36%;
+  transform: translate(-50%, -50%);
+}
 
 /* Popups */
 .popup {
@@ -282,6 +269,66 @@ footer p {
   cursor: default;
 }
 
+@media screen and (max-width: 520px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background: #00569d;
+    position: absolute;
+    top: 0;
+    right: -900px;
+    width: 80%;
+    height: 100vh;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+    z-index: 9;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 24px;
+  }
+
+  .services-title h1 {
+    font-size: 30px;
+  }
+
+  .brain-image {
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .popup {
+    height: 460px;
+  }
+
+  .popup-title {
+    font-size: 16px;
+  }
+
+  .popup-content ul {
+    font-size: 15px;
+  }
+
+  .popup-button {
+    font-size: 12px;
+    padding: 10px 18px;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 @media (max-width: 768px) {
   .services-title h1 {
     font-size: 36px;
@@ -317,37 +364,5 @@ footer p {
   .icon {
     width: 36px;
     height: 36px;
-  }
-}
-
-@media (max-width: 480px) {
-  .services-title h1 {
-    font-size: 28px;
-  }
-
-  .brain-image {
-    max-width: 95%;
-  }
-
-  .popup {
-    height: 460px;
-  }
-
-  .popup-title {
-    font-size: 16px;
-  }
-
-  .popup-content ul {
-    font-size: 15px;
-  }
-
-  .popup-button {
-    font-size: 12px;
-    padding: 10px 18px;
-  }
-
-  .icon {
-    width: 28px;
-    height: 28px;
   }
 }
