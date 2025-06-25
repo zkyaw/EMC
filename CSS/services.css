@@ -18,12 +18,12 @@ body {
 
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../Images/Background.jpg) center/cover no-repeat fixed;
+  background: url(../Images/Background.jpg) center/cover no-repeat;
   opacity: 0.3;
   z-index: -1;
 }
@@ -108,6 +108,7 @@ body::before {
   text-align: center;
   width: 100%;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .services-title h1 {
@@ -129,16 +130,20 @@ body::before {
 
 .brain-container {
   position: relative;
-  width: 90%;
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
 }
 
 .brain-image {
-  width: 100%;
+  width: 60%;
+  max-width: 700px;
+  height: auto;
   display: block;
-  max-width: 930px;
   margin: 0 auto;
 }
 
@@ -269,78 +274,22 @@ footer p {
   cursor: default;
 }
 
-@media screen and (max-width: 520px) {
-  .menu-btn {
-    display: block;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    background: #00569d;
-    position: absolute;
-    top: 0;
-    right: -900px;
-    width: 80%;
-    height: 100vh;
-    padding-top: 80px;
-    transition: all 0.3s ease;
-    z-index: 9;
-  }
-
-  .nav-links.active {
-    right: 0;
-  }
-
-  .nav-links a {
-    width: 100%;
-    padding: 10px 30px;
-    font-size: 24px;
-  }
-
+/* Responsive */
+@media screen and (max-width: 1024px) {
   .services-title h1 {
-    font-size: 30px;
-  }
-
-  .brain-image {
-    width: 100%;
-    max-width: 1000px;
-  }
-
-  .popup {
-    height: 460px;
-  }
-
-  .popup-title {
-    font-size: 16px;
-  }
-
-  .popup-content ul {
-    font-size: 15px;
-  }
-
-  .popup-button {
-    font-size: 12px;
-    padding: 10px 18px;
-  }
-
-  .icon {
-    width: 28px;
-    height: 28px;
+    font-size: 42px;
   }
 }
 
 @media (max-width: 768px) {
   .services-title h1 {
     font-size: 36px;
-  }
-
-  .brain-container {
-    width: 95%;
+    margin-bottom: 20px;
   }
 
   .brain-image {
-    width: 100%;
-    max-width: 650px;
+    width: 85%;
+    max-width: 500px;
   }
 
   .popup {
@@ -365,4 +314,87 @@ footer p {
     width: 36px;
     height: 36px;
   }
+}
+
+@media screen and (max-width: 520px) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background: rgba(0, 86, 157, 0.85);
+    position: absolute;
+    top: 0;
+    right: -900px;
+    width: 80%;
+    height: 100vh;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+    z-index: 9;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .services-title h1 {
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: 0.15em;
+    white-space: pre-line;
+    margin-bottom: 20px;
+  }
+
+  .brain-container {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .brain-image {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin-top: 40px;
+  }
+
+  .icon-student {
+  top: 27%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-adults {
+  top: 29%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-org {
+  top: 55%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-other {
+  top: 56%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
 }
