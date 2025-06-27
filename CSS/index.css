@@ -46,6 +46,7 @@ body::before {
   justify-content: space-between;
   padding: 0 20px;
   padding-right: 50px;
+  position: relative; 
 }
 
 .navbar-logo img {
@@ -100,6 +101,7 @@ body::before {
   right: 20px;
   width: 30px;
   display: none;
+  z-index: 11; 
 }
 
 /* Hero Section */
@@ -186,6 +188,10 @@ footer p {
 @media screen and (max-width: 520px) {
   .menu-btn {
     display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 11;
   }
 
   .nav-links {
@@ -286,4 +292,3 @@ footer p {
     height: 280px;
   }
 }
-
